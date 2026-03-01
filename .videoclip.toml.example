@@ -1,0 +1,21 @@
+# Default platform (tiktok, shorts, reels, twitter)
+platform = "tiktok"
+
+# Groq API key (alternatively, use GROQ_API_KEY environment variable)
+# Get your key at: https://console.groq.com/
+# groq_api_key = "your-groq-api-key-here"
+
+# Clip duration settings (in seconds)
+min_duration = 15
+max_duration = 60
+num_clips = 3
+
+# Output directory for generated clips
+output_dir = "./clips"
+
+# Smart crop - automatically crop to active area (vertical formats)
+smart_crop = true
+
+# Future features (not yet implemented)
+burn_captions = false
+thumbnail = false
