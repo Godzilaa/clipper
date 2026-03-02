@@ -31,7 +31,7 @@ npx serve
 1. Push the frontend folder to your repository
 2. Go to your repository Settings > Pages
 3. Select the branch and `/frontend` folder
-4. Your site will be live at `https://yourusername.github.io/videoclip/`
+4. Your site will be live at `https://godzilaa.github.io/clipper/`
 
 ### Option 5: Deploy to Netlify/Vercel
 
@@ -39,7 +39,7 @@ Simply drag and drop the `frontend` folder to [Netlify](https://app.netlify.com/
 
 ## 📝 Customization
 
-- **Update GitHub Link**: Replace `yourusername` in `index.html` with your actual GitHub username
+- **GitHub Link**: Already configured to https://github.com/Godzilaa/clipper
 - **Add Analytics**: Add Google Analytics or Plausible tracking code before `</head>`
 - **Change Colors**: Modify CSS variables in `styles.css` under `:root`
 - **Add Features**: Extend the feature grid with more cards in `index.html`
