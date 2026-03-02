@@ -20,8 +20,8 @@
                     <path d="M15 12L28 20L15 28V12Z" fill="white"/>
                     <defs>
                         <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
-                            <stop offset="0%" stop-color="#8b5cf6"/>
-                            <stop offset="100%" stop-color="#ec4899"/>
+                            <stop offset="0%" stop-color="#dc2626"/>
+                            <stop offset="100%" stop-color="#ef4444"/>
                         </linearGradient>
                     </defs>
                 </svg>
@@ -199,144 +199,91 @@
         </div>
     </section>
 
-    <!-- Usage Examples -->
-    <section id="usage" class="usage">
-        <div class="section-container">
-            <h2 class="section-title">Usage Examples</h2>
+        <section class="usage">
+            <h2>🚀 Usage</h2>
             
-            <div class="usage-grid">
-                <div class="usage-card">
-                    <div class="usage-header">
-                        <h3>Basic Usage</h3>
-                        <span class="usage-tag">Essential</span>
-                    </div>
-                    <div class="code-block">
-                        <code>videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY</code>
-                        <button class="copy-btn" onclick="copyToClipboard('videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY')">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="usage-card">
-                    <div class="usage-header">
-                        <h3>Platform Optimization</h3>
-                        <span class="usage-tag">Advanced</span>
-                    </div>
-                    <div class="code-block">
-                        <code>videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5</code>
-                        <button class="copy-btn" onclick="copyToClipboard('videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5')">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="usage-card">
-                    <div class="usage-header">
-                        <h3>Custom Configuration</h3>
-                        <span class="usage-tag">Pro</span>
-                    </div>
-                    <div class="code-block">
-                        <code>videoclip --input stream.mp4 --config custom.toml --output-dir clips/</code>
-                        <button class="copy-btn" onclick="copyToClipboard('videoclip --input stream.mp4 --config custom.toml --output-dir clips/')">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="usage-card">
-                    <div class="usage-header">
-                        <h3>View All Options</h3>
-                        <span class="usage-tag">Help</span>
-                    </div>
-                    <div class="code-block">
-                        <code>videoclip --help</code>
-                        <button class="copy-btn" onclick="copyToClipboard('videoclip --help')">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </button>
-                    </div>
+            <div class="usage-example">
+                <h3>Basic Usage</h3>
+                <div class="code-block">
+                    <code>videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY</code>
+                    <button class="copy-btn" onclick="copyToClipboard('videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY')">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Supported Platforms -->
-    <section class="platforms">
-        <div class="section-container">
-            <h2 class="section-title">Supported Platforms</h2>
-            <p class="section-subtitle">Optimized output for all major social media platforms</p>
-            
-            <div class="platforms-grid">
-                <div class="platform-card">
-                    <div class="platform-icon">📱</div>
-                    <h3>TikTok</h3>
-                    <p>Vertical 9:16 format<br/>Up to 60 seconds</p>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">▶️</div>
-                    <h3>YouTube Shorts</h3>
-                    <p>Vertical 9:16 format<br/>Up to 60 seconds</p>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">📸</div>
-                    <h3>Instagram Reels</h3>
-                    <p>Vertical 9:16 format<br/>Up to 90 seconds</p>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">🐦</div>
-                    <h3>Twitter/X</h3>
-                    <p>Multiple formats<br/>Up to 140 seconds</p>
+            <div class="usage-example">
+                <h3>With Platform Optimization</h3>
+                <div class="code-block">
+                    <code>videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5</code>
+                    <button class="copy-btn" onclick="copyToClipboard('videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5')">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" rx="8" fill="url(#gradient2)"/>
-                        <path d="M15 12L28 20L15 28V12Z" fill="white"/>
-                        <defs>
-                            <linearGradient id="gradient2" x1="0" y1="0" x2="40" y2="40">
-                                <stop offset="0%" stop-color="#8b5cf6"/>
-                                <stop offset="100%" stop-color="#ec4899"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <span>VideoClip</span>
+            <div class="usage-example">
+                <h3>Custom Configuration</h3>
+                <div class="code-block">
+                    <code>videoclip --input stream.mp4 --config custom-config.toml --output-dir clips/</code>
+                    <button class="copy-btn" onclick="copyToClipboard('videoclip --input stream.mp4 --config custom-config.toml --output-dir clips/')">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
                 </div>
-                <p>AI-Powered Auto Video Clipper • Built with ❤️ using Rust</p>
             </div>
-            <div class="footer-links">
-                <a href="https://github.com/yourusername/videoclip" target="_blank">GitHub</a>
-                <a href="https://github.com/yourusername/videoclip/blob/main/LICENSE" target="_blank">MIT License</a>
-                <a href="https://github.com/yourusername/videoclip/issues" target="_blank">Report Bug</a>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M16.667 5L7.5 14.167L3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>Copied to clipboard!</span>
+            <div class="usage-example">
+                <h3>View All Options</h3>
+                <div class="code-block">
+                    <code>videoclip --help</code>
+                    <button class="copy-btn" onclick="copyToClipboard('videoclip --help')">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="platforms">
+            <h2>🎯 Supported Platforms</h2>
+            <div class="platform-list">
+                <div class="platform-item">
+                    <span class="platform-emoji">📱</span>
+                    <span>TikTok</span>
+                </div>
+                <div class="platform-item">
+                    <span class="platform-emoji">▶️</span>
+                    <span>YouTube Shorts</span>
+                </div>
+                <div class="platform-item">
+                    <span class="platform-emoji">📸</span>
+                    <span>Instagram Reels</span>
+                </div>
+                <div class="platform-item">
+                    <span class="platform-emoji">🐦</span>
+                    <span>Twitter/X</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built with ❤️ using Rust • <a href="https://github.com/yourusername/videoclip" target="_blank">View on GitHub</a></p>
+            <p class="license">Licensed under MIT</p>
+        </footer>
     </div>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
 
     <script src="script.js"></script>
 </body>
