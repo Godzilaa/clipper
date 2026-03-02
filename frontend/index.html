@@ -8,49 +8,66 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40" rx="8" fill="url(#gradient)"/>
                     <path d="M15 12L28 20L15 28V12Z" fill="white"/>
                     <defs>
                         <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
-                            <stop offset="0%" stop-color="#667eea"/>
-                            <stop offset="100%" stop-color="#764ba2"/>
+                            <stop offset="0%" stop-color="#8b5cf6"/>
+                            <stop offset="100%" stop-color="#ec4899"/>
                         </linearGradient>
                     </defs>
                 </svg>
-                <h1>VideoClip</h1>
+                <span>VideoClip</span>
             </div>
-            <p class="tagline">AI-Powered Auto Video Clipper</p>
-        </header>
-
-        <section class="hero">
-            <h2>Transform Long Videos into Engaging Clips</h2>
-            <p>Automatically extract highlight moments from podcasts, streams, and tutorials using AI. Perfect for content creators who need platform-optimized short-form content.</p>
-            
-            <div class="install-box">
-                <h3>📦 Quick Install</h3>
-                <div class="code-block">
-                    <code>cargo install videoclip</code>
-                    <button class="copy-btn" onclick="copyToClipboard('cargo install videoclip')">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
-                </div>
-                <p class="install-note">Requires Rust 1.75+ and FFmpeg</p>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#install">Install</a>
+                <a href="#usage">Usage</a>
+                <a href="https://github.com/yourusername/videoclip" target="_blank" class="github-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section class="features">
-            <h2>✨ Features</h2>
-            <div class="feature-grid">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-icon">⚡</span>
+                <span>Powered by Groq AI</span>
+            </div>
+            <h1 class="hero-title">
+                Transform Long Videos<br/>
+                into <span class="gradient-text">Engaging Clips</span>
+            </h1>
+            <p class="hero-description">
+                AI-powered CLI tool that automatically extracts highlight moments from podcasts, streams, and tutorials.<br/>
+                Perfect for content creators who need platform-optimized short-form content.
+            </p>
+            <div class="hero-cta">
+                <a href="#install" class="btn btn-primary">Get Started</a>
+                <a href="https://github.com/yourusername/videoclip" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Capabilities -->
+    <section id="features" class="features">
+        <div class="section-container">
+            <h2 class="section-title">Key Capabilities</h2>
+            <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
                     <h3>AI-Powered Analysis</h3>
@@ -82,36 +99,120 @@
                     <p>Full CLI arguments and config file support for customization</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="installation">
-            <h2>📋 Installation Guide</h2>
+    <!-- Quick Start -->
+    <section id="install" class="quickstart">
+        <div class="section-container">
+            <h2 class="section-title">Quick Start</h2>
+            <p class="section-subtitle">Get VideoClip up and running in minutes</p>
             
-            <div class="step">
-                <h3>Step 1: Install Rust</h3>
-                <p>If you don't have Rust installed, get it from <a href="https://rustup.rs/" target="_blank">rustup.rs</a>:</p>
-                <div class="code-block">
-                    <code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code>
-                    <button class="copy-btn" onclick="copyToClipboard('curl --proto=\'=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh')">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install Rust</h3>
+                        <p>If you don't have Rust installed:</p>
+                        <div class="code-block">
+                            <code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code>
+                            <button class="copy-btn" onclick="copyToClipboard('curl --proto=\'=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh')">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="step-note">→ Visit <a href="https://rustup.rs/" target="_blank">rustup.rs</a> for more info</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Install FFmpeg</h3>
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="showTab(event, 'linux')">Linux</button>
+                            <button class="tab-btn" onclick="showTab(event, 'macos')">macOS</button>
+                            <button class="tab-btn" onclick="showTab(event, 'windows')">Windows</button>
+                        </div>
+                        <div id="linux" class="tab-content active">
+                            <div class="code-block">
+                                <code>sudo apt update && sudo apt install ffmpeg</code>
+                                <button class="copy-btn" onclick="copyToClipboard('sudo apt update && sudo apt install ffmpeg')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="macos" class="tab-content">
+                            <div class="code-block">
+                                <code>brew install ffmpeg</code>
+                                <button class="copy-btn" onclick="copyToClipboard('brew install ffmpeg')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="windows" class="tab-content">
+                            <p class="step-note">Download from <a href="https://ffmpeg.org/download.html" target="_blank">ffmpeg.org</a> and add to PATH</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get Groq API Key</h3>
+                        <p>Sign up at <a href="https://console.groq.com/" target="_blank">console.groq.com</a> to get your free API key</p>
+                        <div class="info-box">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M10 6V10M10 14H10.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Groq provides fast, free API access for AI-powered transcription and analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card highlight">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Install VideoClip</h3>
+                        <div class="code-block large">
+                            <code>cargo install videoclip</code>
+                            <button class="copy-btn" onclick="copyToClipboard('cargo install videoclip')">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="step-note success">✓ That's it! VideoClip is ready to use</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="step">
-                <h3>Step 2: Install FFmpeg</h3>
-                <div class="tabs">
-                    <button class="tab-btn active" onclick="showTab('linux')">Linux</button>
-                    <button class="tab-btn" onclick="showTab('macos')">macOS</button>
-                    <button class="tab-btn" onclick="showTab('windows')">Windows</button>
-                </div>
-                <div id="linux" class="tab-content active">
+    <!-- Usage Examples -->
+    <section id="usage" class="usage">
+        <div class="section-container">
+            <h2 class="section-title">Usage Examples</h2>
+            
+            <div class="usage-grid">
+                <div class="usage-card">
+                    <div class="usage-header">
+                        <h3>Basic Usage</h3>
+                        <span class="usage-tag">Essential</span>
+                    </div>
                     <div class="code-block">
-                        <code>sudo apt update && sudo apt install ffmpeg</code>
-                        <button class="copy-btn" onclick="copyToClipboard('sudo apt update && sudo apt install ffmpeg')">
+                        <code>videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY</code>
+                        <button class="copy-btn" onclick="copyToClipboard('videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY')">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                 <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
@@ -119,10 +220,15 @@
                         </button>
                     </div>
                 </div>
-                <div id="macos" class="tab-content">
+
+                <div class="usage-card">
+                    <div class="usage-header">
+                        <h3>Platform Optimization</h3>
+                        <span class="usage-tag">Advanced</span>
+                    </div>
                     <div class="code-block">
-                        <code>brew install ffmpeg</code>
-                        <button class="copy-btn" onclick="copyToClipboard('brew install ffmpeg')">
+                        <code>videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5</code>
+                        <button class="copy-btn" onclick="copyToClipboard('videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5')">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                 <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
@@ -130,115 +236,107 @@
                         </button>
                     </div>
                 </div>
-                <div id="windows" class="tab-content">
-                    <p>Download from <a href="https://ffmpeg.org/download.html" target="_blank">ffmpeg.org</a> and add to PATH</p>
+
+                <div class="usage-card">
+                    <div class="usage-header">
+                        <h3>Custom Configuration</h3>
+                        <span class="usage-tag">Pro</span>
+                    </div>
+                    <div class="code-block">
+                        <code>videoclip --input stream.mp4 --config custom.toml --output-dir clips/</code>
+                        <button class="copy-btn" onclick="copyToClipboard('videoclip --input stream.mp4 --config custom.toml --output-dir clips/')">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="usage-card">
+                    <div class="usage-header">
+                        <h3>View All Options</h3>
+                        <span class="usage-tag">Help</span>
+                    </div>
+                    <div class="code-block">
+                        <code>videoclip --help</code>
+                        <button class="copy-btn" onclick="copyToClipboard('videoclip --help')">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="step">
-                <h3>Step 3: Get Groq API Key</h3>
-                <p>Sign up at <a href="https://console.groq.com/" target="_blank">console.groq.com</a> to get your free API key</p>
-            </div>
-
-            <div class="step highlight">
-                <h3>Step 4: Install VideoClip</h3>
-                <div class="code-block">
-                    <code>cargo install videoclip</code>
-                    <button class="copy-btn" onclick="copyToClipboard('cargo install videoclip')">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="usage">
-            <h2>🚀 Usage</h2>
+    <!-- Supported Platforms -->
+    <section class="platforms">
+        <div class="section-container">
+            <h2 class="section-title">Supported Platforms</h2>
+            <p class="section-subtitle">Optimized output for all major social media platforms</p>
             
-            <div class="usage-example">
-                <h3>Basic Usage</h3>
-                <div class="code-block">
-                    <code>videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY</code>
-                    <button class="copy-btn" onclick="copyToClipboard('videoclip --input video.mp4 --api-key YOUR_GROQ_API_KEY')">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">📱</div>
+                    <h3>TikTok</h3>
+                    <p>Vertical 9:16 format<br/>Up to 60 seconds</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">▶️</div>
+                    <h3>YouTube Shorts</h3>
+                    <p>Vertical 9:16 format<br/>Up to 60 seconds</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">📸</div>
+                    <h3>Instagram Reels</h3>
+                    <p>Vertical 9:16 format<br/>Up to 90 seconds</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🐦</div>
+                    <h3>Twitter/X</h3>
+                    <p>Multiple formats<br/>Up to 140 seconds</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="usage-example">
-                <h3>With Platform Optimization</h3>
-                <div class="code-block">
-                    <code>videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5</code>
-                    <button class="copy-btn" onclick="copyToClipboard('videoclip --input podcast.mp4 --platform youtube-shorts --max-clips 5')">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="url(#gradient2)"/>
+                        <path d="M15 12L28 20L15 28V12Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient2" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#8b5cf6"/>
+                                <stop offset="100%" stop-color="#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>VideoClip</span>
                 </div>
+                <p>AI-Powered Auto Video Clipper • Built with ❤️ using Rust</p>
             </div>
-
-            <div class="usage-example">
-                <h3>Custom Configuration</h3>
-                <div class="code-block">
-                    <code>videoclip --input stream.mp4 --config custom-config.toml --output-dir clips/</code>
-                    <button class="copy-btn" onclick="copyToClipboard('videoclip --input stream.mp4 --config custom-config.toml --output-dir clips/')">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
-                </div>
+            <div class="footer-links">
+                <a href="https://github.com/yourusername/videoclip" target="_blank">GitHub</a>
+                <a href="https://github.com/yourusername/videoclip/blob/main/LICENSE" target="_blank">MIT License</a>
+                <a href="https://github.com/yourusername/videoclip/issues" target="_blank">Report Bug</a>
             </div>
+        </div>
+    </footer>
 
-            <div class="usage-example">
-                <h3>View All Options</h3>
-                <div class="code-block">
-                    <code>videoclip --help</code>
-                    <button class="copy-btn" onclick="copyToClipboard('videoclip --help')">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M5 2H3C2.44772 2 2 2.44772 2 3V13C2 13.5523 2.44772 14 3 14H11C11.5523 14 12 13.5523 12 13V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <rect x="6" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="platforms">
-            <h2>🎯 Supported Platforms</h2>
-            <div class="platform-list">
-                <div class="platform-item">
-                    <span class="platform-emoji">📱</span>
-                    <span>TikTok</span>
-                </div>
-                <div class="platform-item">
-                    <span class="platform-emoji">▶️</span>
-                    <span>YouTube Shorts</span>
-                </div>
-                <div class="platform-item">
-                    <span class="platform-emoji">📸</span>
-                    <span>Instagram Reels</span>
-                </div>
-                <div class="platform-item">
-                    <span class="platform-emoji">🐦</span>
-                    <span>Twitter/X</span>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>Built with ❤️ using Rust • <a href="https://github.com/yourusername/videoclip" target="_blank">View on GitHub</a></p>
-            <p class="license">Licensed under MIT</p>
-        </footer>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M16.667 5L7.5 14.167L3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Copied to clipboard!</span>
     </div>
-
-    <div id="toast" class="toast">Copied to clipboard!</div>
 
     <script src="script.js"></script>
 </body>

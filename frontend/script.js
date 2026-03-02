@@ -4,6 +4,20 @@ function copyToClipboard(text) {
         showToast();
     }).catch(err => {
         console.error('Failed to copy:', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            showToast();
+        } catch (err) {
+            console.error('Fallback copy failed:', err);
+        }
+        document.body.removeChild(textArea);
     });
 }
 
@@ -14,19 +28,23 @@ function showToast() {
     
     setTimeout(() => {
         toast.classList.remove('show');
-    }, 2000);
+    }, 2500);
 }
 
 // Tab functionality
-function showTab(tabId) {
-    // Hide all tab contents
-    const tabContents = document.querySelectorAll('.tab-content');
+function showTab(event, tabId) {
+    // Get the parent element containing tabs
+    const tabContainer = event.target.closest('.step-content, .usage-card');
+    if (!tabContainer) return;
+    
+    // Hide all tab contents within this container
+    const tabContents = tabContainer.querySelectorAll('.tab-content');
     tabContents.forEach(content => {
         content.classList.remove('active');
     });
     
-    // Deactivate all tab buttons
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    // Deactivate all tab buttons within this container
+    const tabButtons = tabContainer.querySelectorAll('.tab-btn');
     tabButtons.forEach(btn => {
         btn.classList.remove('active');
     });
@@ -41,42 +59,22 @@ function showTab(tabId) {
     event.target.classList.add('active');
 }
 
-// Add smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Add animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe feature cards and steps
+// Smooth scrolling for anchor links
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.feature-card, .step, .usage-example');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s ease-out';
-        observer.observe(el);
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
